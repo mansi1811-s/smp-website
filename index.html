@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Us</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        
+        a {
+          text-decoration: none;
+          display: inline-block;
+          padding: 8px 16px;
+        }
+        
+        a:hover {
+          background-color: #ddd;
+          color: black;
+        }
+        
+        .previous {
+          background-color: #f1f1f1;
+          color: black;
+        }
+        
+        
+        .round {
+          border-radius: 50%;
+        }
+        
+        </style>
+
+</head>
+
+<body>
+
+    <a href="ContactUs.html" class="previous round">&#8249;</a>
+
+    <div class="container">
+        <!-- chat box -->
+        <div class="chat-box">
+            <!-- client -->
+            <div class="client">
+                <img src="images/WhatsApp.png" alt="logo" />
+                <div class="client-info">
+                    <h2>8888232113</h2>
+                 
+                </div>
+            </div>
+
+            <!-- main chat section -->
+            <div class="mid">
+                <div class="chat">
+           
+                <div class="client-chat">Hello User!</div>
+                <div class="client-chat">Welcome to Sri Maruthi Pharma website!</div>
+               
+                <div class="client-chat"><p id="chatLog"> Please type in "What are the Services?" to know more about us and press enter</p></div>
+                
+            </div>
+            </div>
+
+            <!-- input field section -->
+            <div class="chat-input">
+                <input type="text" id="userBox" onkeydown="if(event.keyCode == 13){ talk()}" placeholder="Type your Question">
+                <button class="send-btn">
+                    <img src="images/send.png" alt="send-btn">
+                </button>
+            </div>
+        </div>
+
+        <!-- button -->
+        <div class="chat-btn">
+            <img src="images/WhatsApp.png" alt="chat box icon btn">
+        </div>
+    </div>
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

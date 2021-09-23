@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Maruthi Pharma</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <style>
+
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: rgb(221, 245, 215);
+  padding: 20px;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: rgb(221, 245, 215);
+  bottom: 0;
+  width: 100%;
+}
+
+.navbar p {
+  float: right;
+  display: block;
+  color: #080808;
+  text-align: center;
+  padding: 0px 15px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+        .titles{
+    background-color:white;
+    background-size: auto;
+    background-blend-mode: color-dodge;
+    height: max-content;
+    text-align: center ;
+    color: black; 
+    text-decoration: rgb(103, 103, 223);
+}
+        .container {
+            background-color:white;
+  position: relative;
+  text-align: center;
+  color: rgb(15, 15, 15);
+  left: 0%;
+  right: 5%;
+}
+image{
+    width: 100%;
+    height: auto;
+  }
+  .menu-container{
+   
+    display:flex;
+    width:300px;
+  }
+  .button{
+    position: relative;
+    background :#1b1b1b;
+    color: white;
+    font-size:20px;
+    padding: 8px 20px;
+    
+    line-height:30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: width .4s;
+
+  }
+  .button.expand{
+    width: 100%;
+  }
+  .fas.expand:before{
+    content:'\f00d';
+  }
+  ul{
+    list-style: none;
+    position: relative;
+   right:100px;
+    text-align: center;
+    display: block ;
+    background: #1b1b1b;
+    width: 100%;
+    display: none;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  }
+  ul li{
+   text-align: center;
+    line-height: 35px;
+    padding: 8px 20px;
+    cursor:pointer;
+    border:1px solid transparent;
+    border-bottom: 1px solid rgba(255,255,255 0.1);
+  }
+  ul:before{
+    position: absolute;
+    content: '';
+    width:20px;
+    background: #1b1b1b;
+    top:-10px;
+    right:15px;
+    transform: rotate(45deg);
+    z-index: -1;
+  }
+  ul li:last-child{
+    border-bottom:none;
+  }
+  
+  ul li:hover:first-child{
+    border-radius:5px 5px  0 0;
+  }
+  ul li:hover:last-child{
+border-radius: 0 0 5px 5px;
+  }
+  ul li a{
+    color:white;
+    text-decoration: none;
+  }
+  ul li a:hover{
+    color:cyan;
+  }
+
+.slideshow-container {
+max-width: 1000px;
+max-height: 1000px;
+max-zoom: 100px;
+height: 100%;
+position:relative;
+margin:auto;
+width: 100%;
+}
+
+.mySlides {
+display: none;
+}
+
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+margin-top: -22px;
+padding: 16px;
+color: rgb(12, 12, 12);
+font-weight: bold;
+font-size: 18px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
+}
+
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+padding-left: 10px;
+padding-right: 10px;
+padding: auto;
+}
+
+.text {
+color: #214b2e;
+font-size: 30px;
+font-style: italic;
+padding: 12px 12px;
+position: relative;
+bottom: 8px;
+width: 100%;
+text-align: center;
+text-decoration: rgb(103, 103, 223);
+}
+
+.dot {
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+-webkit-animation-name: fade;
+-webkit-animation-duration: 1.5s;
+animation-name: fade;
+animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+        .navbar {
+            overflow:hidden;
+            background-color:#333;
+            bottom:0;
+            width:100%;
+        }
+        .navbar p{
+            float:right;
+            display: black;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 0px 10px;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        .footer{
+            background: cornflowerblue;
+            color:cornsilk;
+            height:300px;
+        }
+        .footer .footer-content{
+            border: crimson;
+            height: 350px;
+           display:flex;
+        }
+        .footer .footer-content .footer-section{
+          flex:1;
+          padding: 25px;
+        
+        }
+        .footer .footer-content .social .contact span{
+          display: block;
+          font-size: 1.1em;
+          margin-bottom: 8px;
+        }
+        .footer .footer-content .social .socials a{
+          border: 1px solid gray;
+  width: 45px;
+  height: 41px;
+  padding-top: 5px;
+  margin-right: 5px;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.3em;
+  border-radius: 5px;
+  transition: all .3s;
+        }
+        .footer .footer-content .social .socials a:hover {
+  border: 1px solid white;
+  color: white;
+  transition: all .3s;
+}
+.footer .footer-content .contact form .contact-input {
+  background: #272727;
+  color: #bebdbd;
+  margin-bottom: 10px;
+  line-height: 1.5rem;
+  padding: .9rem 1.4rem;
+  border: none;
+}
+
+.footer .footer-content .contact form .contact-input:focus {
+  background: #1a1a1a;
+}
+
+.footer .footer-content .contact form .contact-btn {
+  float: right;
+  font-size: 1.1em;
+  font-family: 'Lora', serif;
+}
+.btn {
+  
+  background: #006669;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  font-size: 1.08em;
+  font-family: 'Lora', serif;
+}
+
+.btn:hover {
+  color: white !important;
+  background: #005255;
+}
+
+.text-input {
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+  outline: none;
+  color: #444;
+  line-height: 1.5rem;
+  font-size: 1.2em;
+  font-family: 'Lora', serif;
+}
+
+.header {
+  overflow: hidden;
+  background-color: rgb(221, 245, 215);
+  padding: 20px 10px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  
+}
+
+.header a:hover {
+  background-color: #04AA6D;
+  color: black;
+}
+
+.header a.active {
+  
+  color: black;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+
+}
+
+.title {
+  padding-left: 40%;
+}
+
+    </style>
+</head>
+<body>
+        <div class="header">
+          <img src="images/Logo3.png" alt="Loading..." height="100">
+              <div class="header-right">
+                <a class="active" href="homepage.html">Home</a>
+                <a href="ContactUs.html">Contact Us</a>
+                <a href="third.html">About Us</a>
+              </div>
+            </div>  
+            <div class ="title">
+        <h1>Sri Maruthi Pharma&reg;</h1> 
+      </div>
+
+        <script>
+          $(document).ready(function(){
+            $('.button').click(function(){
+              if($(this).hasClass('expand')){
+                $('ul').slideUp(function(){
+                  $('.button').removeClass('expand');
+                  $('.fas').removeClass('expand')
+                });
+              }else{
+                $(this).addClass('expand');
+                setTimeout(function(){
+                  $('.fas').addClass('expand');
+                  $('ul').stop().slideDown();
+                },200);
+              }
+
+            });
+          });
+          </script>
+       
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+      
+        <img class="image" src="images/surg2.jpeg"  width="100%" height="500">
+        <div class="text"><q><b>A pharmacy for all your needs</b></q></div>
+      </div>
+    <div class="mySlides fade">
+      <img class="image" src="images/animed.jpeg"  width="100%" height="500" >
+      <div class="text">Sri Maruthi Pharma in Bangalore is one of the leading businesses in wholesale pharmaceutical supplier. 
+          </div>
+      
+    </div>
+  
+    <div class="mySlides fade">
+  
+      <img class="image" src="images/surgi1.jpeg"  width="100%" height="500" >
+      <div class="text">SMP or Sri Maruthi Pharma are one of the leading dealers in: Surgical
+        Equipment Dealers, Surgical Item Dealers
+      </div>
+    </div>
+  
+    <div class="mySlides fade">
+      
+      <img class="image" src="images/rack1.jpeg"  width="100%" height="500">
+      <div class="text">Medical Product Dealers,Pharmaceutical Product Wholesalers,Pharmaceutical Product Manufacturers</div>
+    </div>
+    <div class="mySlides fade">
+      
+        <img class="image" src="images/rack2.jpeg"  width="100%" height="500">
+        <div class="text"> Pharmaceutical Distributors,
+             Medicine Distributors</div>
+      </div>
+      <div class="mySlides fade">
+      
+        <img class="image" src="images/labo.jpeg"  width="100%" height="500">
+        <div class="text"> Medical Equipment Dealers, Chemist</div>
+      </div>
+      <div class="mySlides fade">
+      
+        <img class="image" src="images/med1.jpeg"  width="100%" height="500">
+        <div class="text">Generic
+            Medicine Wholesalers</div>
+      </div>
+      <div class="mySlides fade">
+      
+        <img class="image" src="images/med2.jpeg"  width="100%" height="500">
+        <div class="text">Generic Medicine Distributors, Pharmaceutical
+            Product Distributors</div>
+      </div>
+     
+         <div class="mySlides fade">
+      
+        <img class="image" src="images/mask2.jpeg"  width="100%" height="500">
+        <div class="text">Also known for ,Surgical Face Mask Dealers,
+            N95 Face Mask Dealers and much more</div>
+      </div>
+      <div class="mySlides fade">
+      
+        <img class="image" src="images/logo.jpeg"  width="100%" height="500">
+        <div class="text"><q>A right Pharmacy for you is right here....!</q></div>
+      </div>
+    
+   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+  <div class="footer">
+    <div class="footer-content">
+     
+       <div class="footer-section about">
+        <h1 class="logo-text"><span>Sri Maruthi Pharma</span></h1>
+        <img src="images/logo.jpg" alt="Loading..." width="100" height="100" > 
+        <p>
+         A Pharmacy for all your needs...!!!
+        </p>
+       </div>
+      
+       <div class ="footer-section social">
+       <h2>Need help?</h2>
+       
+        <div class="contact">
+          <span><i class="fas fa-phone"></i> &nbsp; 123-456-789</span>
+          <span><i class="fas fa-envelope"></i> &nbsp; info@srimaruthipharma.com</span>
+        </div>
+        <div class="socials">
+          <a href="https://www.gmail.com" class="fa fa-google"></a>
+          <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+        </div>
+       </div>
+       <div>
+        <img class="image" src="images/WhatsApp.png" style="width:80%" height="80" ><br>   
+            <a class="active" href="index.html">Chat with us</a>
+        </div> 
+       <div class ="footer-section contact form">
+        <h2>Write to us</h2>
+        <br>
+        <form action="homepage.html" method="post">
+          <input type="email" name="email" class="text-input contact-input" placeholder="Your email address...">
+          <textarea rows="4" name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
+          <button type="submit" class="btn btn-big contact-btn">
+            <i class="fas fa-envelope"></i>
+            Send
+          </button>
+        </form>
+       </div>
+      </div>
+    </div>
+    
+    <div class="navbar">
+        <p>&copy; Sri Maruthi Pharma | Designed by Full Stack Squad</p>
+    </div>
+ 
+    <script src="sample.js"></script>
+</body>
+</html>
